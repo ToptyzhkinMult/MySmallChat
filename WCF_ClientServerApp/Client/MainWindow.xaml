@@ -1,0 +1,16 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="413.334" Width="541.833" Closing="Window_Closing">
+    <Grid Margin="0,0,74,192">
+        <TextBox x:Name="tbUserName" HorizontalAlignment="Left" Height="37" Margin="170,20,0,0" TextWrapping="Wrap" Text="Имя пользователя" VerticalAlignment="Top" Width="280"/>
+        <Button x:Name="bConnection" Click="ConnectionClic" Content="Connection" HorizontalAlignment="Left" Margin="24,20,0,0" VerticalAlignment="Top" Width="124" Height="37"/>
+        <ListBox x:Name="lbChat" HorizontalAlignment="Left" Height="167" Margin="24,62,0,-62" VerticalAlignment="Top" Width="426"/>
+        <TextBox x:Name="tbMessage" HorizontalAlignment="Left" Height="58" Margin="24,234,0,-125" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="426" KeyDown="tbMessage_KeyDown"/>
+
+    </Grid>
+</Window>
