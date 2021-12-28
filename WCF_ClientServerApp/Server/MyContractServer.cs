@@ -24,9 +24,10 @@ namespace Server
             };
 
             nextId++;
-            users.Add(_user);
             SendMsg(0, $"{_user.Name} подключился к чату!"); //шлём id = 0, потому что не говорим юзеру подключился он или нет
             //SendMsg(_user.Id, $"{_user.Name} подключился к чату!");
+            users.Add(_user);
+            
 
 
             return _user.Id;
@@ -37,9 +38,9 @@ namespace Server
             var _user = users.FirstOrDefault(u => u.Id == id);
             if (users != null)
             {
-                SendMsg(0,$"{_user.Name} покинул чат"); //шлём id = 0, потому что не говорим юзеру подключился он или нет
-                //SendMsg(_user.Id,$"{_user.Name} покинул чат");
                 users.Remove(_user);
+                SendMsg(0, $"{_user.Name} покинул чат"); //шлём id = 0, потому что не говорим юзеру подключился он или нет
+                //SendMsg(_user.Id,$"{_user.Name} покинул чат");
             }
         }
 

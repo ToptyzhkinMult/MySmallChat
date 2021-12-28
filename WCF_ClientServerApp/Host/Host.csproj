@@ -51,14 +51,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{3d3edfb1-2b4c-46cf-bfe0-b335965e44f5}</Project>
-      <Name>Contract</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Server\Server.csproj">
       <Project>{b8a4c5e3-9732-4ad7-a81c-c644776d0192}</Project>
       <Name>Server</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
